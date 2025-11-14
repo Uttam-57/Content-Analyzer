@@ -44,7 +44,7 @@ export default function Upload() {
     formData.append('file', selectedFile);
 
     try {
-      const res = await fetch('http://localhost:4000/upload', {
+      const res = await fetch('https://content-analyzer-1.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -64,7 +64,7 @@ export default function Upload() {
     setStatus('uploading');
 
     try {
-      const res = await fetch('http://localhost:4000/text', {
+      const res = await fetch('https://content-analyzer-1.onrender.com/text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text }),
