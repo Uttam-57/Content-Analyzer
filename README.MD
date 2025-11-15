@@ -2,7 +2,7 @@
 
 ## ✨ Project Overview
 
-This application is a specialized service for performing secure, non-persistent text extraction from uploaded files (PDFs, images). It is built on a **MEN (MongoDB-less MERN)** stack, utilizing a deployment-friendly, in-memory processing architecture.
+This application is a specialized service for performing secure, non-persistent text extraction from uploaded files (PDFs, images). It is built on a **MERN (MongoDB-less MERN)** stack, utilizing a deployment-friendly, in-memory processing architecture.
 
 ### Key Features
 
@@ -12,7 +12,7 @@ This application is a specialized service for performing secure, non-persistent 
     * **PDFs** (via `pdf-parse`)
     * **Images** (JPG, PNG) using OCR powered by `Tesseract.js` and `sharp` image preprocessing.
 
-* **💻 MEN Stack:** Built with **R**eact for the frontend user interface and **N**ode/**E**xpress for the backend processing API.
+* **💻 MERN Stack:** Built with **R**eact for the frontend user interface and **N**ode/**E**xpress for the backend processing API.
 
 ## 🔗 Live Application URLs 
 
@@ -76,7 +76,7 @@ The application will run locally on `http://localhost:4000`.
 
 ## ✍️ Brief Write-up of Approach
 
-The Content Analyzer utilizes the MEN stack to provide an efficient, non-persistent text extraction service. The architectural solution for cloud deployment centered on replacing disk-based file handling with **`multer.memoryStorage()`**. This technique ensures that uploaded files are held solely as a `Buffer` in the Node.js server's RAM. The backend controller passes this buffer directly to extraction libraries (`pdf-parse`, `Tesseract.js/sharp`), thereby eliminating all disk I/O and manual file cleanup. This approach ensures guaranteed data deletion upon request completion, high performance, and seamless compatibility with ephemeral hosting environments like Render and Vercel.
+The Content Analyzer utilizes the MERN stack to provide an efficient, non-persistent text extraction service. The architectural solution for cloud deployment centered on replacing disk-based file handling with **`multer.memoryStorage()`**. This technique ensures that uploaded files are held solely as a `Buffer` in the Node.js server's RAM. The backend controller passes this buffer directly to extraction libraries (`pdf-parse`, `Tesseract.js/sharp`), thereby eliminating all disk I/O and manual file cleanup. This approach ensures guaranteed data deletion upon request completion, high performance, and seamless compatibility with ephemeral hosting environments like Render and Vercel.
 
 ## © Author & Copyright
 
